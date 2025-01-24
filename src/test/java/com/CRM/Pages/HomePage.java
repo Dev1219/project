@@ -3,6 +3,8 @@ package com.CRM.Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.CRM.Utility.UtilityScreenshot;
+
 public class HomePage {
 	
 	//Encapsulation
@@ -42,7 +44,11 @@ public class HomePage {
 	
 	public String getStatusOfLink() 
 	{
+		UtilityScreenshot.getscreenshot(driver);
 		driver.findElement(link).click();
+		
+		UtilityScreenshot.getscreenshot(driver);
+		
 		return driver.getCurrentUrl(); 
 	}
 
